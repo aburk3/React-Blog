@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import axios from "axios";
-import { Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 import "./Blog.css";
 import Posts from "./Posts/Posts";
@@ -14,10 +14,12 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/" exact>
+                  Home
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   // this.props.match.url is the current path that you are on
                   // e.g. pathname: this.props.match.url + "/new-post"  - appends new-post to the end of the curren path
                   to={{
@@ -27,7 +29,7 @@ class Blog extends Component {
                   }}
                 >
                   New Post
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
