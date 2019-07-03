@@ -18,6 +18,8 @@ class Blog extends Component {
               </li>
               <li>
                 <Link
+                  // this.props.match.url is the current path that you are on
+                  // e.g. pathname: this.props.match.url + "/new-post"  - appends new-post to the end of the curren path
                   to={{
                     pathname: "/new-post",
                     hash: "#submit",
